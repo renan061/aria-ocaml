@@ -2,13 +2,8 @@
 # Makefile
 #
 
-RM= rm -f
-
-scanner:
-	ocamllex scanner.mll
-	ocamlc scanner.ml
-	./a.out
+main:
+	cd src && $(MAKE)
 
 clean:
-	$(RM) *.out *.cmi *.cmo
-	$(RM) scanner.ml
+	cd src && $(MAKE) $@
