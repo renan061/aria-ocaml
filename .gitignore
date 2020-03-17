@@ -6,6 +6,7 @@ bin/*
 *.cmo
 *.cmx
 
-scanner.ml
+parser.conflicts
 parser.ml
 parser.mli
+scanner.ml

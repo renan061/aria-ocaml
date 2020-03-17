@@ -13,7 +13,7 @@ scanner: parser
 	ocamlopt parser.cmx scanner.ml
 
 parser: ast
-	menhir parser.mly
+	menhir --explain parser.mly
 	ocamlopt ast.cmx parser.mli parser.ml
 
 ast:
@@ -21,4 +21,4 @@ ast:
 
 clean:
 	$(RM) *.o *.out *.cmi *.cmo *.cmx
-	$(RM) scanner.ml parser.mli parser.ml
+	$(RM) parser.conflicts parser.ml parser.mli scanner.ml  
